@@ -73,7 +73,7 @@ void solve() {
     int q;
     cin >> q;
 
-    vector<int> results;  // 💡 To store outputs
+    vector<int> results;
 
     while (q--) {
         int type;
@@ -83,7 +83,7 @@ void solve() {
             cin >> l1 >> r1 >> l2 >> r2;
             int mini1 = s1.query(0, 0, n1 - 1, l1, r1);
             int mini2 = s2.query(0, 0, n2 - 1, l2, r2);
-            results.push_back(min(mini1, mini2)); // 💡 store result instead of printing
+            results.push_back(min(mini1, mini2)); 
         } else {
             int arrno, i, val;
             cin >> arrno >> i >> val;
@@ -97,7 +97,7 @@ void solve() {
         }
     }
 
-    // ✅ Print all answers at the end
+    
     for (int ans : results) {
         cout << ans << endl;
     }
